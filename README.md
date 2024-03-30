@@ -1,4 +1,4 @@
-# 👉🏻 9기 [FE]  Code-Challenge-01
+# 👉🏻 9기 [FE]  Code-Challenge-02
 
 ### 🎲 과제 진행 방법
 
