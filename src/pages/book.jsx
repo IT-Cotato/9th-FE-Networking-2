@@ -1,9 +1,9 @@
-import { Outlet, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Outlet, Link, useParams } from "react-router-dom";
+import styled from "styled-components";
 
 export default function Book() {
-  let book = '수정필요'; // book을 useParams를 통해 가져오세요!
-  book = book.replaceAll('_', ' ');
+  let book = useParams().book; // book을 useParams를 통해 가져오세요!
+  book = book.replaceAll("_", " ");
 
   return (
     <Container>
