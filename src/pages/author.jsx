@@ -1,10 +1,10 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate, useParams } from 'react-router-dom';
 import { books } from '../shared/constants/book';
 import styled from 'styled-components';
 
 export default function Author() {
   const navigate = useNavigate();
-  let name = '수정필요'; // name을 useParams를 이용해 가져오세요!
+  let { name } = useParams();
   name = name.replaceAll('_', ' ');
 
   return (
