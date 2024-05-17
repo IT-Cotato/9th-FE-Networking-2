@@ -1,11 +1,11 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom';
-import { books } from '../shared/constants/book';
-import styled from 'styled-components';
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { books } from "../shared/constants/book";
+import styled from "styled-components";
 
 export default function Author() {
   const navigate = useNavigate();
-  let name = '수정필요'; // name을 useParams를 이용해 가져오세요!
-  name = name.replaceAll('_', ' ');
+  let { name } = useParams();
+  name = name.replaceAll("_", " ");
 
   return (
     <Container>
@@ -16,7 +16,7 @@ export default function Author() {
       <BookLists>
         {books[name].map((book, index) => (
           <BookItem key={index} onClick={() => navigate(`${book.title}`)}>
-            <Link to={`${book.title}`}>{book.title.replaceAll('_', ' ')}</Link>
+            <Link to={`${book.title}`}>{book.title.replaceAll("_", " ")}</Link>
           </BookItem>
         ))}
       </BookLists>
